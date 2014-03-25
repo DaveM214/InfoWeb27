@@ -20,6 +20,12 @@
 <content id="attacks">
 	<title>Attacks on Firewall</title>
 	
+	<sumary>
+		<item>Types of Attacks</item>
+		<item>Compensating Measures</item>
+		<item>Final Consideration</item>
+	</sumary>
+	
 	<intro>
 		Given the understanding on how firewall works and its importance, one must consider how this security technology can be breached. This page lists 5 classes of attacks, which target firewalls, or target the systems that firewalls are supposed to protect. Each of the attacks described here were designed to penetrate only one layer of firewalls. In practice, firewalls are deployed in many layers separating the Internet from industrial control and safety networks. However, we assume that if one layer of firewalls can be breached, then new attacks can be mounted on the next layer of firewalls in the layered defensive architecture.
 	</intro>
