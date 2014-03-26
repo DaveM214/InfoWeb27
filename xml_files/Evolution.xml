@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE content [
+	<!ELEMENT content (title, sumary, intro?, subsections*)>
+		<!ATTLIST content id ID #REQUIRED>
+		<!ELEMENT title (#PCDATA)>
+		<!ELEMENT sumary (item+)>
+		<!ELEMENT intro (#PCDATA)>
+		<!ELEMENT subsections (subsection*)>
+			<!ELEMENT subsection (subtitle, subcontent)>
+				<!ATTLIST subsection id ID #REQUIRED>
+				<!ELEMENT subtitle (#PCDATA)>
+				<!ELEMENT subcontent (text | image | list | subsections)*>
+					<!ELEMENT text (#PCDATA)>
+					<!ELEMENT image (#PCDATA)>
+					<!ELEMENT list (item+)>
+						<!ELEMENT item (#PCDATA)>
+
+]>
+
+<content id="evolution">
+	<title>History and Evolution of Firewalls</title>
+
+	<sumary>
+		<item>Introduction</item>
+		<item>Packet Filters</item>
+		<item>Stateful Filters</item>
+		<item>Application Level Firewalls</item>
+		<item>Future Firewalls</item>
+	</sumary>	
+		
+	<intro>
+		When computers were first starting to be networked between different locations in the form of the ARPANET it was not necessary to be highly worried about the possibility of what would, in modern times, be though of as malware and viruses with the number of computers on the network being so small that it was known who was sending what at any given time. Eventually however the internet was born with many networks being connected together and a massive growth in its use was seen in the	late 1980's. With such a large number of computers connected it became inevitable that "bad data" would be sent around so firewalls were developed as a solution to combat this.
+	</intro>
+			
+			
+	<subsections>
+		<subsection id="packet-filter">
+			<subtitle>Packet Filters</subtitle>
+			<subcontent>
+				<text>
+					A packet filter is the simplest type of firewall. It works by examining each packet as it comes in to the network that is protected by the filter. The packets that are examined are checked against a set of rules that the firwall has. These rules check the addresses, port and protocol of the packet. There are 3 possible situations that follow on from the check being carried out:
+				</text>
+				<list>
+					<item>The packet is allowed through the filter.</item>
+					<item>The packet is blocked and no further action is taken</item>
+					<item>The packet is blocked and a message sent to sender </item>
+				</list>
+				<text>
+					It is important to note that this type of firewall cannot see the state of the packet as it passes through. Due to the large growth in the size of the internet in the late 1980's many different groups were working on producing firewalls at the same time. The first one that was comercially available was the Digital Electric Corps' SEAL firewall which was a simple packet filter. This firewall operates on the first 3 levels of the OSI reference model.
+				</text>
+			</subcontent>
+		</subsection>
+			
+		<subsection id="stateful-filters">
+			<subtitle>Stateful Filters</subtitle>
+			<subcontent>
+				<text>
+					The premise of a stateful filter is similar to that of a packet filter in that it examines every packet as it enters the network and checks it against a series of rules. The key difference is that this type of firewall holds onto each packet for long enough to also check its state of the communication. For example if it is part of an ongoing communcation or the start of a new one. This "statefulness" gives this firewall its name and provides the advantage of more flexible rules for packets.
+				</text>
+				<text>
+					The first firewall of this type was developed soon after the first packet filters in 1989 by AT&amp;T Bell Laboratories. This firewall operates up to the 4th layer of the OSI reference model as it can now take in information about the transport layer. Both this type of firewall and the packet filter firewall are known as network level filters because they sit between the local area network and the wider area network, they only manage access into and out of the network and are not aware of what is running on the network that they are sitting in front of. 
+				</text>
+			</subcontent>
+		</subsection>	
+	
+		<subsection id="application-firewall">
+			<subtitle>Application Level Firewalls</subtitle>
+			<subcontent>
+				<text>
+					Though network level firewalls can provide adequate protection for a network as a whole they are not particularly flexible and do not provide the level of protection that is desired for most systems. The answer to this was the development of application level firewalls which can operate up to all 7 levels of the OSI reference model and is therefore able to understand protocols and applications that are running behind it on the system.
+				</text>
+				<text>
+					For example a firewall would allow certain types of traffic to some applications but not others. For example an	email application that is running might have the firewall allow it to send and receive packets with the POP (post office protocol) and SMTP (simple mail transfer protocol) but not Torrent protocol packets. 
+				</text>
+				<text>
+					Most modern firewalls are of this type and also incorporate an Intrusion Prevention System, which monitors the network for malicious activity, and block out malformed packages which are possible containers of malicious data.
+				</text>
+				<text>
+					Modern firewalls can also be distributed and cloud based. This makes them more resilient as they are not located in a single location which once compromised would otherwise take down the firewall protection for the network. Another advantage of this type of dsitribution is that it is easy to extend the firewall to provide more or less coverage meaning it is scalable and therefore can be cost effective for busninesses to use.
+				</text>	
+			</subcontent>
+		</subsection>
+
+		<subsection id="future-firewall">
+			<subtitle>Future Firewalls</subtitle>
+			<subcontent>
+				<text>
+					Developments in the area of firewalls have slown down somewhat due to the fact that they are no longer seen as offering the comprehensive "magic bullet" defense which they were once seen to. Current efforts to improve firewalls	are mainly focussed on making sure the effectiveness of the current technologies including things like deep packet inspection, where the data inside the packet is looked at and inspected, and the previously mentioned IPS is good while at the same time making sure that they do not adversely affect the latency on the network to a large degree.
+				</text>
+				<text>
+					Firewalls that attempt to achieve this feat are known as NGFW's or next generation firwalls. Though increasingly means other than firewalls are being sought to provide security on the network due to the limitations and predictability on firewalls.
+				</text>
+			</subcontent>
+		</subsection>
+	</subsections>
+</content>
+
