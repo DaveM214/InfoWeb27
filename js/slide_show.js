@@ -7,7 +7,7 @@ var SLIDE_H = 480;
 
 
 
-var slide_images = ["images_slideshow/img0.jpg","images_slideshow/img1.jpg","images_slideshow/img2.jpeg","images_slideshow/img3.png","images_slideshow/img4.png","images_slideshow/img5.jpg","images_slideshow/img6.jpg","images_slideshow/img7.jpg"];
+var slide_images = ["images_slideshow/img0.png","images_slideshow/img1.png","images_slideshow/img2.png"];
 
 var slides = new Array();
 

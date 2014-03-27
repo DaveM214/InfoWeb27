@@ -58,6 +58,11 @@ p.mouseovertext{
 
 
 /*Slideshow CSS*/
+
+#title {
+	text-align: center;
+}
+
 #slideshow 
 {
 	margin-top: 5%;
