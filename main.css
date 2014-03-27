@@ -27,6 +27,11 @@ div#header li{
 	display: inline;
 }
 
+a{
+	text-decoration: none;
+	color:black;
+}
+
 div#header li:hover{
 	background-color:#666666;
 	cursor: pointer;
@@ -57,7 +62,11 @@ div#attackgroup{
 }
 
 p.mouseovertext{
+	position:relative; top:-40px;
+	margin:0px;
+	padding:0px;
 	display:none;
+	font-size: 10px;
 }
 
 
