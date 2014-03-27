@@ -4,10 +4,15 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<link href="main.css" rel="stylesheet" type="text/css" title="default"/>
+
+		<!--Script for the slideshow-->
+		<script type="text/javascript" src="js/slide_show.js"></script>
+
+
 		<title>Firewalls</title>
 	</head>
 	
-	<body>
+	<body onload="initialise();">
 		
 		<div id="header" class="pagesection">
 			<img src="header.png" alt="Header" id="pagebanner"></img>
@@ -20,7 +25,13 @@
 		</div>
 		
 		<div id="main" class="pagesection">
-			<!-->The main element in the middle of the page goes here! nothing at the moment <!-->		
+			<!-->The main element in the middle of the page goes here! nothing at the moment <!-->
+			<div id="slideshow">
+				<div id="thumbnails"> </div>
+				<canvas id="slideshow_canvas"></canvas>
+				<img id="play_button" class="selected" src="images_slideshow/play.png"/>
+				<img id="pause_button" class="unselected" src="images_slideshow/pause.png"/>			
+			</div>	
 		</div>
 	
 		<div id="footer" class="pagesection">
@@ -53,3 +64,4 @@
 
 		</div>
 	</body>
+</html>

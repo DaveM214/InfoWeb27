@@ -28,7 +28,7 @@ div#header li{
 }
 
 div#footer{
-	position: relative; top:300px;
+	position: relative; top:100px;
 	
 }
 
@@ -56,6 +56,66 @@ p.mouseovertext{
 }
 
 
+
+/*Slideshow CSS*/
+#slideshow 
+{
+	margin-top: 5%;
+	position: relative;
+	left:25%;
+	border-width: 2px;
+	border-style: solid;
+	padding: 10px;
+}
+#slideshow_canvas
+{
+
+	border-width: 4 px;
+	border-style: solid;
+	display: block;
+}
+
+.unselected {
+	width: 32px;
+	height: 32px;
+	padding: 5px;
+	margin: 5px;
+}
+
+.unselected:hover {
+	border-width: 4 px;
+	border-style: solid;
+}
+
+.selected {
+	width: 32px;
+	height: 32px;
+	padding: 5px;
+	margin: 5px;
+	border-width: 4 px;
+	border-style: solid;
+}
+
+.thumbnail {
+	width: 40px;
+	height: 40px;
+	padding: 5px;
+	margin: 5px;
+	border-width: 2 px;
+	border-style: dashed;
+	border-color: black;
+}
+
+.selected_thumbnail {
+	width: 40px;
+	height: 40px;
+	padding: 5px;
+	margin: 5px;
+	border-width: 4 px;
+	border-style: dashed;
+	border-color: red;
+}
+/*End of Slideshow CSS*/
 
 
 
