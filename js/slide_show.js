@@ -2,8 +2,8 @@
 
 // width="480" height="854"
 //Slide dimensions
-var SLIDE_W = 640;
-var SLIDE_H = 480;
+var SLIDE_W = 720;
+var SLIDE_H = 320;
 
 
 var titles = ["Overview", "Types and Evolution", "Attacks"];
@@ -11,7 +11,7 @@ var slide_images = ["images_slideshow/img0.png","images_slideshow/img1.png","ima
 
 var slides = new Array();
 
-var TICK = 100;
+var TICK = 5000;
 
 var intid = 0;
 
@@ -118,9 +118,12 @@ function initialise()
 
 	canvas.addEventListener("click", onclick);
 
+	setInterval(increaseAlpha, 100);
+
 	intid = setInterval(mainLoop,TICK);
 
 	context.globalAlpha = 0.1;
+
 
 	setSlide(0);
 
@@ -142,20 +145,26 @@ function setSlide(slide_index)
 
 	title_h3 = document.getElementById("slide_title");
 	title_h3.innerHTML = titles[currentSlide];
-	context.globalAlpha = 0;
+	
+	context.globalAlpha = 0.0;
 }
 
 function mainLoop () {
 
 
 	draw();
-
 	//console.log("globalAlpha: " + context.globalAlpha);
 	if( context.globalAlpha >= 0.85 )
 	{
 		setSlide((currentSlide+1)%slide_images.length);
+
 	}
 
+	
+}
+
+function increaseAlpha(){
+	draw();
 	context.globalAlpha += 0.1;	
 }
 

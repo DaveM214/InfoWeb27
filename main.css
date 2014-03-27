@@ -27,13 +27,19 @@ div#header li{
 	display: inline;
 }
 
+a{
+	text-decoration: none;
+	color:black;
+}
+
 div#header li:hover{
 	background-color:#666666;
 	cursor: pointer;
 }
 
 div#footer{
-	position: relative; top:100px;
+	position: relative; top:50px;
+
 	
 }
 
@@ -42,29 +48,45 @@ div.footerelement img{
 		height:auto;
 }
 
+div.footerelement{
+	width: 170px;
+	height: 120px;
+	text-align: center;
+}
+
+
+.captiontext{
+	text-align: center;
+	margin-bottom: 50px;
+}
+
 div#overviewgroup{
 	position:absolute;left: 25%;
 	margin-top:5px;
 }	
 
-div#typegroup{
+div#evolutiongroup{
 	position:absolute;left: 45%;
 	margin-top:-2px;
 }
 
-div#attackgroup{
+div#attacksgroup{
 	position: absolute; left:65%;
 }
 
 p.mouseovertext{
+	position:relative; top:-40px;
+	margin:0px;
+	padding:0px;
 	display:none;
+	font-size: 10px;
 }
 
 
 
 /*Slideshow CSS*/
 
-#title {
+.slide_title {
 	text-align: center;
 }
 

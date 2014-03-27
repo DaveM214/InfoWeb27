@@ -9,6 +9,22 @@ function initialisePages(){
 			subtopic.onclick = function() { loadHome(); }
 		}
 	}
+
+	var footerTopics = document.getElementById("footer").getElementsByTagName("div");
+	for (var i = 0; i < footerTopics.length; i++){
+		var footerTopic = footerTopics[i];
+		footerTopic.onclick = function() {setUpFunction(this);}
+	}
+}
+
+function setUpFunction(div){
+
+	var id = div.id;
+	var name = id.replace("group","");
+	name[0] = name.charAt(0).toUpperCase();
+
+	requestData("xml_files/" + name + ".xml", loadContent);
+
 }
 
 function loadHome(){
