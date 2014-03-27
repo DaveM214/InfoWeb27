@@ -73,14 +73,12 @@ p.mouseovertext{
 	margin-top: 5%;
 	position: relative;
 	left:25%;
-	border-width: 2px;
-	border-style: solid;
 	padding: 10px;
 }
 #slideshow_canvas
 {
 
-	border-width: 4 px;
+	border-width: 2px;
 	border-style: solid;
 	display: block;
 }
@@ -112,9 +110,7 @@ p.mouseovertext{
 	height: 40px;
 	padding: 5px;
 	margin: 5px;
-	border-width: 2 px;
-	border-style: dashed;
-	border-color: black;
+	opacity: 0.5;
 }
 
 .selected_thumbnail {
@@ -122,10 +118,7 @@ p.mouseovertext{
 	height: 40px;
 	padding: 5px;
 	margin: 5px;
-	border-width: 4 px;
-	border-style: dashed;
-	border-color: red;
-}
+	opacity: 1;
 /*End of Slideshow CSS*/
 
 
