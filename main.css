@@ -1,5 +1,5 @@
 body{
-	font-family: arial,sans-serif;
+	font-family: verdana,sans-serif;
 	background-color: #D1D2D4;
 }
 
@@ -63,6 +63,11 @@ p.mouseovertext{
 
 
 /*Slideshow CSS*/
+
+#title {
+	text-align: center;
+}
+
 #slideshow 
 {
 	margin-top: 5%;

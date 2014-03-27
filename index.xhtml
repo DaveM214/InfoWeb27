@@ -4,23 +4,27 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<link href="main.css" rel="stylesheet" type="text/css" title="default"/>
+		<link href="content.css" rel="stylesheet" type="text/css" title="default"/>
 
 		<!--Script for the slideshow-->
 		<script type="text/javascript" src="js/slide_show.js"></script>
+		<script type="text/javascript" src="js/load_pages.js"></script>
+		<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+
 
 
 		<title>Firewalls</title>
 	</head>
 	
-	<body onload="initialise();">
+	<body onload="initialise();initialisePages();">
 		
 		<div id="header" class="pagesection">
 			<img src="header.png" alt="Header" id="pagebanner"></img>
 			<ul id="subpagelist">
-				<li>Home</li>
-				<li>Overview</li>
-				<li>Types and Evolution</li>
-				<li>Attacks</li>
+				<li><a href="#" id="Home">Home</a></li>
+				<li><a href="#" id="Overview">Overview</a></li>
+				<li><a href="#" id="Evolution">Types and Evolution</a></li>
+				<li><a href="#" id="Attacks">Attacks</a></li>
 			</ul>
 		</div>
 		
@@ -31,6 +35,7 @@
 			<!--SLIDESHOW-->
 			<div id="slideshow">
 				<div id="thumbnails"> </div>
+				<h3 id="title">Some title</h3>
 				<canvas id="slideshow_canvas"></canvas>
 				<img id="play_button" class="selected" src="images_slideshow/play.png"/>
 				<img id="pause_button" class="unselected" src="images_slideshow/pause.png"/>			
