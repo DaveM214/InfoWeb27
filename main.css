@@ -85,6 +85,7 @@ p.mouseovertext{
 	height: 32px;
 	padding: 5px;
 	margin: 5px;
+	display: inline;
 }
 
 .unselected:hover {
