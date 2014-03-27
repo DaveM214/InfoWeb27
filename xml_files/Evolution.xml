@@ -21,7 +21,6 @@
 	<title>History and Evolution of Firewalls</title>
 
 	<sumary>
-		<item>Introduction</item>
 		<item>Packet Filters</item>
 		<item>Stateful Filters</item>
 		<item>Application Level Firewalls</item>
@@ -58,7 +57,7 @@
 					The premise of a stateful filter is similar to that of a packet filter in that it examines every packet as it enters the network and checks it against a series of rules. The key difference is that this type of firewall holds onto each packet for long enough to also check its state of the communication. For example if it is part of an ongoing communcation or the start of a new one. This "statefulness" gives this firewall its name and provides the advantage of more flexible rules for packets.
 				</text>
 				<text>
-					The first firewall of this type was developed soon after the first packet filters in 1989 by AT&amp;T Bell Laboratories. This firewall operates up to the 4th layer of the OSI reference model as it can now take in information about the transport layer. Both this type of firewall and the packet filter firewall are known as network level filters because they sit between the local area network and the wider area network, they only manage access into and out of the network and are not aware of what is running on the network that they are sitting in front of. 
+					The first firewall of this type was developed soon after the first packet filters in 1989 by AT and T Bell Laboratories. This firewall operates up to the 4th layer of the OSI reference model as it can now take in information about the transport layer. Both this type of firewall and the packet filter firewall are known as network level filters because they sit between the local area network and the wider area network, they only manage access into and out of the network and are not aware of what is running on the network that they are sitting in front of. 
 				</text>
 			</subcontent>
 		</subsection>	
