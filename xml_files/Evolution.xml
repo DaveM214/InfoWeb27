@@ -7,7 +7,7 @@
 		<!ELEMENT intro (#PCDATA)>
 		<!ELEMENT subsections (subsection*)>
 			<!ELEMENT subsection (subtitle, subcontent)>
-				<!ATTLIST subsection id ID #REQUIRED>
+				<!ATTLIST subsection id ID #REQUIRED level CDATA #REQUIRED>
 				<!ELEMENT subtitle (#PCDATA)>
 				<!ELEMENT subcontent (text | image | list | subsections)*>
 					<!ELEMENT text (#PCDATA)>
@@ -34,7 +34,7 @@
 			
 			
 	<subsections>
-		<subsection id="packet-filter">
+		<subsection id="packet-filter" level="1">
 			<subtitle>Packet Filters</subtitle>
 			<subcontent>
 				<text>
@@ -51,7 +51,7 @@
 			</subcontent>
 		</subsection>
 			
-		<subsection id="stateful-filters">
+		<subsection id="stateful-filters" level="1">
 			<subtitle>Stateful Filters</subtitle>
 			<subcontent>
 				<text>
@@ -63,7 +63,7 @@
 			</subcontent>
 		</subsection>	
 	
-		<subsection id="application-firewall">
+		<subsection id="application-firewall" level="1">
 			<subtitle>Application Level Firewalls</subtitle>
 			<subcontent>
 				<text>
@@ -81,7 +81,7 @@
 			</subcontent>
 		</subsection>
 
-		<subsection id="future-firewall">
+		<subsection id="future-firewall" level="1">
 			<subtitle>Future Firewalls</subtitle>
 			<subcontent>
 				<text>

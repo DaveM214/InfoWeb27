@@ -7,7 +7,7 @@
 		<!ELEMENT intro (#PCDATA)>
 		<!ELEMENT subsections (subsection*)>
 			<!ELEMENT subsection (subtitle, subcontent)>
-				<!ATTLIST subsection id ID #REQUIRED>
+				<!ATTLIST subsection id ID #REQUIRED level CDATA #REQUIRED>
 				<!ELEMENT subtitle (#PCDATA)>
 				<!ELEMENT subcontent (text | image | list | subsections)*>
 					<!ELEMENT text (#PCDATA)>
@@ -33,7 +33,7 @@
 			
 			
 	<subsections>
-		<subsection id="customs-analogy">
+		<subsection id="customs-analogy" level="1">
 			<subtitle>Customs Analogy</subtitle>
 			<subcontent>
 				<text>
@@ -49,7 +49,7 @@
 			</subcontent>
 		</subsection>
 			
-		<subsection id="back-to-cs">
+		<subsection id="back-to-cs" level="1">
 			<subtitle>Back to Computer Science</subtitle>
 			<subcontent>
 				<text>
@@ -58,7 +58,7 @@
 			</subcontent>
 		</subsection>	
 	
-		<subsection id="packets-information">
+		<subsection id="packets-information" level="1">
 			<subtitle>Packets of Information</subtitle>
 			<subcontent>
 				<text>
@@ -70,7 +70,7 @@
 			</subcontent>
 		</subsection>
 
-		<subsection id="firewalls">
+		<subsection id="firewalls" level="1">
 			<subtitle>Firewalls</subtitle>
 			<subcontent>
 				<text>

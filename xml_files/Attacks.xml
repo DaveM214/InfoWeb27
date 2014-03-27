@@ -7,7 +7,7 @@
 		<!ELEMENT intro (#PCDATA)>
 		<!ELEMENT subsections (subsection*)>
 			<!ELEMENT subsection (subtitle, subcontent)>
-				<!ATTLIST subsection id ID #REQUIRED>
+				<!ATTLIST subsection id ID #REQUIRED level CDATA #REQUIRED>
 				<!ELEMENT subtitle (#PCDATA)>
 				<!ELEMENT subcontent (text | image | list | subsections)*>
 					<!ELEMENT text (#PCDATA)>
@@ -31,11 +31,11 @@
 	</intro>
 	
 	<subsections>
-		<subsection id="types">
+		<subsection id="types" level="1">
 			<subtitle>Types of Attacks</subtitle>
 			<subcontent>
 				<subsections>
-					<subsection id="password-stealing">
+					<subsection id="password-stealing" level="2">
 						<subtitle>Password Stealing</subtitle>
 						<subcontent>
 							<text>
@@ -43,7 +43,7 @@
 							</text>
 						</subcontent>
 					</subsection>
-					<subsection id="external_assets">
+					<subsection id="external_assets" level="2">
 						<subtitle>Attacks on External Assets</subtitle>
 						<subcontent>
 							<text>
@@ -54,7 +54,7 @@
 							</text>
 						</subcontent>
 					</subsection>
-					<subsection id="network">
+					<subsection id="network" level="2">
 						<subtitle>Attack on the Network</subtitle>
 						<subcontent>
 							<text>
@@ -62,7 +62,7 @@
 							</text>
 						</subcontent>
 					</subsection>
-					<subsection id="firewall_vulnerabilities">
+					<subsection id="firewall_vulnerabilities" level="2">
 						<subtitle>Firewall Vulnerabilities</subtitle>
 						<subcontent>
 							<text>
@@ -70,7 +70,7 @@
 							</text>
 						</subcontent>
 					</subsection>
-					<subsection id="physical_access">
+					<subsection id="physical_access" level="2">
 						<subtitle>Physical Access</subtitle>
 						<subcontent>
 							<text>
@@ -82,15 +82,11 @@
 			</subcontent>
 		</subsection>
 
-		<subsection id="compensating_measures">
+		<subsection id="compensating_measures" level="1">
 			<subtitle>Alternatives and Compensating Measures</subtitle>
 			<subcontent>
-				<text>
-					Despite all these different kinds of attacks, there are alternatives and compensating measures to adopt in order to make the firewall protection stronger.
-				</text>
-
 				<subsections>
-					<subsection id="two-factor">
+					<subsection id="two-factor" level="2">
 						<subtitle>2-Factor Authentication</subtitle>
 						<subcontent>
 							<text>
@@ -98,7 +94,7 @@
 							</text>
 						</subcontent>
 					</subsection>
-					<subsection id="encryption">
+					<subsection id="encryption" level="2">
 						<subtitle>Encryption</subtitle>
 						<subcontent>
 							<text>
@@ -106,7 +102,7 @@
 							</text>
 						</subcontent>
 					</subsection>
-					<subsection id="firewall-rules">
+					<subsection id="firewall-rules" level="2">
 						<subtitle>Firewalls Rules</subtitle>
 						<subcontent>
 							<text>
@@ -114,7 +110,7 @@
 							</text>
 						</subcontent>
 					</subsection>
-					<subsection id="hids-nids">
+					<subsection id="hids-nids" level="2">
 						<subtitle>HIDS and NIDS</subtitle>
 						<subcontent>
 							<text>
@@ -125,7 +121,7 @@
 							</text>
 						</subcontent>
 					</subsection>
-					<subsection id="patch">
+					<subsection id="patch" level="2">
 						<subtitle>Updated Patch</subtitle>
 						<subcontent>
 							<text>
@@ -133,7 +129,7 @@
 							</text>
 						</subcontent>
 					</subsection>
-					<subsection id="usg">
+					<subsection id="usg" level="2">
 						<subtitle>Unidirectional Security Gateways</subtitle>
 						<subcontent>
 							<text>
@@ -145,7 +141,7 @@
 			</subcontent>
 		</subsection>
 
-		<subsection id="final-considerations">
+		<subsection id="final-considerations" level="1">
 			<subtitle>Final Considerations</subtitle>
 			<subcontent>
 				<text>
