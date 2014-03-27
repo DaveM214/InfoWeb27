@@ -14,6 +14,7 @@
 					<!ELEMENT image (#PCDATA)>
 					<!ELEMENT list (item+)>
 						<!ELEMENT item (#PCDATA)>
+							<!ATTLIST item ref IDREF #IMPLIED>
 
 ]>
 
@@ -21,10 +22,10 @@
 	<title>Overview</title>
 
 	<sumary>
-		<item>Customs Analogy</item>
-		<item>Back to Computer Science</item>
-		<item>Packets of Information</item>
-		<item>Firewalls</item>
+		<item ref="customs-analogy">Customs Analogy</item>
+		<item ref="back-to-cs">Back to Computer Science</item>
+		<item ref="packets-information">Packets of Information</item>
+		<item ref="firewalls">Firewalls</item>
 	</sumary>	
 		
 	<intro>

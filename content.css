@@ -30,6 +30,10 @@ h1{
 	color: white;
 }
 
+.summary a{
+	color: white;
+}
+
 p{
 	text-align: justify;
 }

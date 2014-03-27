@@ -113,7 +113,10 @@ function loadContent(xmlhttp){
 	for (var i = 0; i < summaryItems.length; i++){
 		var item = summaryItems[i]
 		var li = document.createElement("li");
-		li.innerHTML = item.firstChild.data;
+		var a = document.createElement("a");
+		a.href = "#" + item.getAttribute("ref");
+		a.innerHTML = item.firstChild.data;
+		li.appendChild(a);
 		ul.appendChild(li); //Appending the li elements to the ul element
 	}
 

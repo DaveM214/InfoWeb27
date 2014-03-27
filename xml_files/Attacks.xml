@@ -14,6 +14,7 @@
 					<!ELEMENT image (#PCDATA)>
 					<!ELEMENT list (item+)>
 						<!ELEMENT item (#PCDATA)>
+							<!ATTLIST item ref IDREF #IMPLIED>
 
 ]>
 
@@ -21,9 +22,9 @@
 	<title>Attacks on Firewall</title>
 	
 	<sumary>
-		<item>Types of Attacks</item>
-		<item>Compensating Measures</item>
-		<item>Final Consideration</item>
+		<item ref="types">Types of Attacks</item>
+		<item ref="compensating_measures">Compensating Measures</item>
+		<item ref="final-considerations">Final Consideration</item>
 	</sumary>
 	
 	<intro>

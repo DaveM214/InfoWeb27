@@ -14,6 +14,7 @@
 					<!ELEMENT image (#PCDATA)>
 					<!ELEMENT list (item+)>
 						<!ELEMENT item (#PCDATA)>
+							<!ATTLIST item ref IDREF #IMPLIED>
 
 ]>
 
@@ -21,10 +22,10 @@
 	<title>History and Evolution of Firewalls</title>
 
 	<sumary>
-		<item>Packet Filters</item>
-		<item>Stateful Filters</item>
-		<item>Application Level Firewalls</item>
-		<item>Future Firewalls</item>
+		<item ref="packet-filter">Packet Filters</item>
+		<item ref="stateful-filters">Stateful Filters</item>
+		<item ref="application-firewall">Application Level Firewalls</item>
+		<item ref="future-firewall">Future Firewalls</item>
 	</sumary>	
 		
 	<intro>
