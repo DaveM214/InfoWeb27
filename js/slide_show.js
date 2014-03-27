@@ -2,11 +2,11 @@
 
 // width="480" height="854"
 //Slide dimensions
-var SLIDE_W = 640;
-var SLIDE_H = 480;
+var SLIDE_W = 720;
+var SLIDE_H = 320;
 
 
-
+var titles = ["Overview", "Types and Evolution", "Atacks"];
 var slide_images = ["images_slideshow/img0.png","images_slideshow/img1.png","images_slideshow/img2.png"];
 
 var slides = new Array();
@@ -56,16 +56,10 @@ function pause_event() {
 
 function select_thumbnail(thumbnail)
 {
-	pause_event();
+	//pause_event();
 
-	slides[currentSlide].thumbnail.className = "thumbnail";
-
-	currentSlide = thumbnail.id;
-
-	slides[currentSlide].thumbnail.className = "selected_thumbnail";
-
-	context.globalAlpha = 1;
-	draw();
+	setSlide(thumbnail.id);
+	
 }
 
 
@@ -98,8 +92,8 @@ var Slide = function (x, y, src,id) {
 //Control Functions
 function initialise()
 {
-	pause_button = document.getElementById("pause_button");
-	play_button = document.getElementById("play_button");
+	//pause_button = document.getElementById("pause_button");
+	//play_button = document.getElementById("play_button");
 
 	slideshow_div = document.getElementById("slideshow");
 	canvas = document.getElementById("slideshow_canvas");
@@ -126,11 +120,11 @@ function initialise()
 
 	intid = setInterval(mainLoop,TICK);
 
-	pause_button.onclick = pause_event;
+	//pause_button.onclick = pause_event;
 
-	play_button.onclick = play_event;
+	//play_button.onclick = play_event;
 
-	context.globalAlpha = 0.1;
+	setSlide(0);
 
 
 }
@@ -142,6 +136,18 @@ function draw()
 	slides[currentSlide].draw(context);
 }
 
+function setSlide(slide_index)
+{
+	slides[currentSlide].thumbnail.className = "thumbnail";
+	currentSlide = slide_index;
+	slides[currentSlide].thumbnail.className = "selected_thumbnail";
+
+	title_h3 = document.getElementById("slide_title");
+	title_h3.innerHTML = titles[currentSlide];
+	
+	context.globalAlpha = 0.0;
+}
+
 function mainLoop () {
 
 
@@ -150,10 +156,7 @@ function mainLoop () {
 	//console.log("globalAlpha: " + context.globalAlpha);
 	if( context.globalAlpha >= 0.85 )
 	{
-		slides[currentSlide].thumbnail.className = "thumbnail";
-		currentSlide = (currentSlide+1)%slide_images.length;
-		slides[currentSlide].thumbnail.className = "selected_thumbnail";
-		context.globalAlpha = 0;
+		setSlide((currentSlide+1)%slide_images.length);
 	}
 
 	context.globalAlpha += 0.1;	

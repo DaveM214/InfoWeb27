@@ -73,7 +73,7 @@ p.mouseovertext{
 
 /*Slideshow CSS*/
 
-#title {
+.slide_title {
 	text-align: center;
 }
 
@@ -99,6 +99,7 @@ p.mouseovertext{
 	height: 32px;
 	padding: 5px;
 	margin: 5px;
+	display: inline;
 }
 
 .unselected:hover {
