@@ -27,6 +27,11 @@ div#header li{
 	display: inline;
 }
 
+div#header li:hover{
+	background-color:#666666;
+	cursor: pointer;
+}
+
 div#footer{
 	position: relative; top:100px;
 	
