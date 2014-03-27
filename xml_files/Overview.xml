@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE content [
+	<!ELEMENT content (title, sumary, intro?, subsections*)>
+		<!ATTLIST content id ID #REQUIRED>
+		<!ELEMENT title (#PCDATA)>
+		<!ELEMENT sumary (item+)>
+		<!ELEMENT intro (#PCDATA)>
+		<!ELEMENT subsections (subsection*)>
+			<!ELEMENT subsection (subtitle, subcontent)>
+				<!ATTLIST subsection id ID #REQUIRED>
+				<!ELEMENT subtitle (#PCDATA)>
+				<!ELEMENT subcontent (text | image | list | subsections)*>
+					<!ELEMENT text (#PCDATA)>
+					<!ELEMENT image (#PCDATA)>
+					<!ELEMENT list (item+)>
+						<!ELEMENT item (#PCDATA)>
+
+]>
+
+<content id="evolution">
+	<title>History and Evolution of Firewalls</title>
+
+	<sumary>
+		<item>Customs Analogy</item>
+		<item>Back to Computer Science</item>
+		<item>Packets of Information</item>
+		<item>Firewalls</item>
+	</sumary>	
+		
+	<intro>
+		A good way to start to talk about Firewalls is by giving the intuition behind them. It's good to try to relate abstract systems with some real world systems or institutions that perform similar tasks, so that it may turn out that we already know how we could translate it to the computational world. Indeed, many computational system are actually inspired or automated versions of their real world counterparts. Having said that, we shall start by the Customs Analogy. 
+	</intro>
+			
+			
+	<subsections>
+		<subsection id="customs-analogy">
+			<subtitle>Customs Analogy</subtitle>
+			<subcontent>
+				<text>
+					Whenver you want to send something to other countries using the mail service, the item or package you're trying to send must pass through Customs Authorities inspection of the destination country before being delivered to its final destination.
+				</text>
+				<list>
+					<item>International laws</item>
+					<item>Country’s specific laws</item>
+				</list>
+				<text>					
+					You cannot simply pack and send bombs or dangerous chemical substances to your friends living abroad. Some of this items will likely not reach the destination, because they are forbbidden for one reason or another to enter the other country. There are international and country's specific laws that restrict the delivery of several types os items to a given country and if an item doesn't obey these rules, they will just be destroyed or sent back to you.
+				</text>
+			</subcontent>
+		</subsection>
+			
+		<subsection id="back-to-cs">
+			<subtitle>Back to Computer Science</subtitle>
+			<subcontent>
+				<text>
+					A similar situation happens when we try to make computers communicate with others from a same network or from some external network.
+				</text>
+			</subcontent>
+		</subsection>	
+	
+		<subsection id="packets-information">
+			<subtitle>Packets of Information</subtitle>
+			<subcontent>
+				<text>
+					Computers communicate with each other by exchanging packets of information. These packets carry not only the actual content of a given message, but also some control information used to transfer this content over the network infrastructure. Taking into consideration how the underlaying network infraestructure works, these packets can be used for both benign or malignant purposes.
+				</text>
+				<text>
+					There are several types of packets, these different packets belong the different layers of the protocol stack, as defined by the OSI model. 
+				</text>
+			</subcontent>
+		</subsection>
+
+		<subsection id="firewalls">
+			<subtitle>Firewalls</subtitle>
+			<subcontent>
+				<text>
+					A system that controls the incoming and outgoing of network traffic by analyzing these data packets and determining whether they should be allowed through or not, based on an applied rule set (Laws) is what we call a Firewall.
+				</text>
+			</subcontent>
+		</subsection>
+	</subsections>
+</content>
+
