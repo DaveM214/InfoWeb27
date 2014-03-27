@@ -64,7 +64,7 @@ p.mouseovertext{
 
 /*Slideshow CSS*/
 
-#title {
+.slide_title {
 	text-align: center;
 }
 

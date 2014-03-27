@@ -2,8 +2,8 @@
 
 // width="480" height="854"
 //Slide dimensions
-var SLIDE_W = 640;
-var SLIDE_H = 480;
+var SLIDE_W = 720;
+var SLIDE_H = 320;
 
 
 var titles = ["Overview", "Types and Evolution", "Atacks"];
@@ -124,8 +124,6 @@ function initialise()
 
 	//play_button.onclick = play_event;
 
-	context.globalAlpha = 0.1;
-
 	setSlide(0);
 
 
@@ -146,7 +144,8 @@ function setSlide(slide_index)
 
 	title_h3 = document.getElementById("slide_title");
 	title_h3.innerHTML = titles[currentSlide];
-	context.globalAlpha = 0;
+	
+	context.globalAlpha = 0.0;
 }
 
 function mainLoop () {
