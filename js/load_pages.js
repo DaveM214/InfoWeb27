@@ -5,8 +5,25 @@ function initialisePages(){
 		var subtopic = subtopics[i];
 		if (subtopic.id !== "Home"){
 			subtopic.onclick = function() { requestData("xml_files/" + this.id + ".xml", loadContent); }
+		} else if (subtopic.id === "Home"){
+			subtopic.onclick = function() { loadHome(); }
 		}
 	}
+}
+
+function loadHome(){
+	//Fetch the div of class "content" and remove if it exists
+	var divs = document.getElementsByTagName("div");
+	for (var i = 0; i < divs.length; i++){
+		var div = divs[i];
+		if (div.className === "content") div.remove();
+	}
+
+	//Fetch the div of id "main" and "footer" and set it display mode to none
+	var divMain = document.getElementById("main");
+	var divFooter = document.getElementById("footer");
+	divMain.style.display = "block";
+	divFooter.style.display = "block";
 }
 
 //This function will be called for every link in the menu (except the "Home" link)
@@ -55,6 +72,7 @@ function loadContent(xmlhttp){
 	var contentId = content.id; 
 	var title = xml.getElementsByTagName("title")[0]; //The page title
 	var summary = xml.getElementsByTagName("sumary")[0]; //The summary
+	var intro = xml.getElementsByTagName("intro")[0];
 	var subsections = content.getElementsByTagName("subsections")[0]; //The first level of subsections
 
 	/** Creating the HTML elements **/
@@ -85,6 +103,15 @@ function loadContent(xmlhttp){
 
 	divSummary.appendChild(ul);
 	divContent.appendChild(divSummary);
+
+	//Introduction
+	var divIntro = document.createElement("div");
+	divIntro.className = "intro";
+	var pIntro = document.createElement("p");
+	pIntro.innerHTML = intro.firstChild.data;
+	divIntro.appendChild(pIntro);
+	divContent.appendChild(divIntro);
+
 
 
 	//Subsections
@@ -194,11 +221,11 @@ function loadContent(xmlhttp){
 
 	}
 
+	divContent.style.display = "none";
 	document.body.appendChild(divContent);
-
+	$(".content").show("slow");
 
 }
-
 
 
 
