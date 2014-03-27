@@ -223,7 +223,7 @@ function loadContent(xmlhttp){
 
 	divContent.style.display = "none";
 	document.body.appendChild(divContent);
-	$(".content").show("slow");
+	$(".content").fadeIn();
 
 }
 
