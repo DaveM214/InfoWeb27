@@ -59,6 +59,9 @@ function select_thumbnail(thumbnail)
 	//pause_event();
 
 	setSlide(thumbnail.id);
+
+	clearInterval(intid);
+	intid = setInterval(nextSlide,TICK);
 	
 }
 
@@ -120,7 +123,7 @@ function initialise()
 
 	setInterval(increaseAlpha, 100);
 
-	intid = setInterval(mainLoop,TICK);
+	intid = setInterval(nextSlide,TICK);
 
 	context.globalAlpha = 0.1;
 
@@ -149,17 +152,10 @@ function setSlide(slide_index)
 	context.globalAlpha = 0.0;
 }
 
-function mainLoop () {
+function nextSlide () {
 
 
-	draw();
-	//console.log("globalAlpha: " + context.globalAlpha);
-	if( context.globalAlpha >= 0.85 )
-	{
-		setSlide((currentSlide+1)%slide_images.length);
-
-	}
-
+	setSlide((currentSlide+1)%slide_images.length);
 	
 }
 
