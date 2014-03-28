@@ -31,33 +31,8 @@ function onclick (e) {
     console.log("Click position: " + e.clientX + " " + e.clientY);
 }
 
-function pause_event() {
-		console.log("lol");
-		if( !pause )
-		{
-			clearInterval(intid);
-			pause = 1;
-			play_button.className = "unselected";
-			pause_button.className ="selected";
-			
-		}		
-
-}
-
- function play_event() {
-		if( pause )
-		{
-			intid = setInterval(mainLoop,TICK);
-			pause = 0;
-			play_button.className = "selected";
-			pause_button.className ="unselected";
-		}
-}
-
 function select_thumbnail(thumbnail)
 {
-	//pause_event();
-
 	setSlide(thumbnail.id);
 
 	clearInterval(intid);
@@ -95,8 +70,6 @@ var Slide = function (x, y, src,id) {
 //Control Functions
 function initialise()
 {
-	//pause_button = document.getElementById("pause_button");
-	//play_button = document.getElementById("play_button");
 
 	slideshow_div = document.getElementById("slideshow");
 	canvas = document.getElementById("slideshow_canvas");
