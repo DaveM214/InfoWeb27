@@ -21,7 +21,6 @@ function setUpFunction(div){
 
 	var id = div.id;
 	var name = id.replace("group","");
-	name[0] = name.charAt(0).toUpperCase();
 
 	requestData("xml_files/" + name + ".xml", loadContent);
 

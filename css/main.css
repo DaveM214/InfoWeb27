@@ -59,17 +59,17 @@ div.footerelement{
 	margin-bottom: 50px;
 }
 
-div#overviewgroup{
+div#Overviewgroup{
 	position:absolute;left: 25%;
 	margin-top:5px;
 }	
 
-div#evolutiongroup{
+div#Evolutiongroup{
 	position:absolute;left: 45%;
 	margin-top:-2px;
 }
 
-div#attacksgroup{
+div#Attacksgroup{
 	position: absolute; left:65%;
 }
 
