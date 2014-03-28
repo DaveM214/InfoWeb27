@@ -140,7 +140,6 @@ function loadContent(xmlhttp){
 		var subsection = subsectionsElems[i];
 		if (subsection.getAttribute("level") == "1"){
 			subsectionList.push(subsection);
-			console.log("subsection level 1");
 		}
 	}
 
